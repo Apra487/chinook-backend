@@ -1,5 +1,3 @@
-org: apra487
-console: true
 service: chinook-RestAPI
 
 provider:
@@ -17,12 +15,12 @@ functions:
     events:
       - http: ANY /{proxy+}
       - http: ANY /
-    environment:
-      USERNAME: ${{ secrets.USERNAME }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-      HOSTNAME: ${{ secrets.HOSTNAME }} 
-      PORT:  ${{ secrets.PORT }} 
-      DATABASE: ${{ secrets.DATABASE }} 
+    environment: 
+      USERNAME:  ${ssm:/chinook/username}
+      PASSWORD: ${ssm:/chinook/password}
+      HOSTNAME: ${ssm:/chinook/hostname} 
+      PORT: ${ssm:/chinook/port} 
+      DATABASE: ${ssm:/chinook/database} 
 
 plugins:
   - serverless-offline
