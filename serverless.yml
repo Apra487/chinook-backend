@@ -16,11 +16,11 @@ functions:
       - http: ANY /{proxy+}
       - http: ANY /
     environment: 
-      USERNAME: {{ secret.USERNAME}}
-      PASSWORD: {{secret.PASSWORD}}
-      HOSTNAME: {{secret.HOSTNAME}}
-      PORT: {{secret.PORT}}
-      DATABASE: {{secret.DATABASE}}  
+      USERNAME: {{ secret.USERNAME.USERNAME}}
+      PASSWORD: {{secret.PASSWORD.PASSWORD}}
+      HOSTNAME: {{secret.HOSTNAME.HOSTNAME}}
+      PORT: {{secret.PORT.PORT}}
+      DATABASE: {{secret.DATABASE.DATABASE.}}  
 
 plugins:
   - serverless-offline
