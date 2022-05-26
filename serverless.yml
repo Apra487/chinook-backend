@@ -15,12 +15,7 @@ functions:
     events:
       - http: ANY /{proxy+}
       - http: ANY /
-    environment:
-      USERNAME: ${{ secrets.USERNAME }}
-      PASSWORD: ${{ secrets.PASSWORD }}
-      HOSTNAME: ${{ secrets.HOSTNAME }} 
-      PORT:  ${{ secrets.PORT }} 
-      DATABASE: ${{ secrets.DATABASE }} 
+    environment: ${file(env.json)}
 
 plugins:
   - serverless-offline
