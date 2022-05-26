@@ -13,10 +13,11 @@ function checkBody(req, res, next) {
 function getCustomers(req, res) {
     (async () => {
 		try {
+			console.log(dbPool);
 			let results = await dbPool.query('SELECT "CustomerId" , "FirstName", "LastName", "Email"  FROM "Customer" ORDER BY "CustomerId" DESC LIMIT 100');
-			const rows = results?.rows;
+			const {rows} = results;
             res.status(200).json({
-                data: rows
+                data: rows || ''
             })
 		} catch (e) {
 			console.log(e);
