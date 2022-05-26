@@ -24,8 +24,6 @@ jobs:
         cat > env.json << EOF
         ${{ secrets.ENV }}
         EOF
-    - name: show data
-      run: cat env.json
     - name: serverless deploy
       uses: serverless/github-action@v3
       with:

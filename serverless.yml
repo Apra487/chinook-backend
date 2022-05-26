@@ -15,7 +15,12 @@ functions:
     events:
       - http: ANY /{proxy+}
       - http: ANY /
-    environment: ${file(env.json)}
+    environment: 
+      USERNAME: {{ secret.USERNAME}}
+      PASSWORD: {{secret.PASSWORD}}
+      HOSTNAME: {{secret.HOSTNAME}}
+      PORT: {{secret.PORT}}
+      DATABASE: {{secret.DATABASE}}  
 
 plugins:
   - serverless-offline
