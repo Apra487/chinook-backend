@@ -1,5 +1,3 @@
-org: apra487
-console: true
 service: chinook-RestAPI
 
 provider:
