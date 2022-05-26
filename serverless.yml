@@ -15,12 +15,12 @@ functions:
     events:
       - http: ANY /{proxy+}
       - http: ANY /
-    # environment: 
-    #   USERNAME: ${{ secret.USERNAME }}
-    #   PASSWORD: ${{ secret.PASSWORD }}
-    #   HOSTNAME: ${{ secret.HOSTNAME }} 
-    #   PORT:  ${{ secret.PORT }} 
-    #   DATABASE: ${{ secret.DATABASE }} 
+    environment: 
+      USERNAME:  ${ssm:/chinook/username}
+      PASSWORD: ${ssm:/chinook/password}
+      HOSTNAME: ${ssm:/chinook/hostname} 
+      PORT: ${ssm:/chinook/port} 
+      DATABASE: ${ssm:/chinook/database} 
 
 plugins:
   - serverless-offline
