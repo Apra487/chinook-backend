@@ -1,7 +1,7 @@
 # chinook-backend
 This is the backend for chinook-web-app app which does basic CRUD functions(only create and update for POC) on PostgreSQL Database and is automatically deployed using Github action to AWS lambda, AWS Api Gateway using serverless framework.
 
-
+## Application Architecture
 <img width="1126" alt="Screenshot 2022-05-27 at 12 09 09 PM" src="https://user-images.githubusercontent.com/54775196/170645119-f1a34aaf-d8ce-4913-a3c6-4417184904a5.png">
 
 ## Features
@@ -39,5 +39,9 @@ The api will get exposed at `localhost:8001`.
 - /api/v1/users `GET`
 - /api/v1/users  `POST`
 
+## Demo
+API is hosted [here](https://7bxeljut40.execute-api.ap-south-1.amazonaws.com/dev/api/v1/users).
+
+Click [here](https://github.com/Apra487/chinook-poc-web-app) for the frontend-repo.
 
 
