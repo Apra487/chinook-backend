@@ -20,7 +20,7 @@ functions:
       PASSWORD: ${ssm:/chinook/password}
       HOSTNAME: ${ssm:/chinook/hostname} 
       PORT: ${ssm:/chinook/port} 
-      DATABASE: ${ssm:/chinook/database} 
+      DATABASE: ${ssm:/chinook/database}
 
 plugins:
   - serverless-offline
