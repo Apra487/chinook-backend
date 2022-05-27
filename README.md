@@ -26,7 +26,9 @@ Then run the following command:
 
 ```bash
 npm i
-sls offline start 
+npm start
 ```
+
+
 
 
