@@ -15,7 +15,7 @@ function getCustomers(req, res) {
 		try {
 			console.log(dbPool);
 			let results = await dbPool.query(
-				'SELECT "CustomerId" , "FirstName", "LastName", "Email"  FROM "Customer" ORDER BY "CustomerId" DESC LIMIT 100'
+				'SELECT "CustomerId" , "FirstName", "LastName", "Email"  FROM "Customer" ORDER BY "CustomerId" DESC'
 			);
 			const { rows } = results;
 			res.status(200).json({
